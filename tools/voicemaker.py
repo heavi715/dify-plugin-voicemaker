@@ -29,16 +29,16 @@ class VoicemakerTool(Tool):
         }
 
         json_data = {
-            "Engine": tool_parameters["engine"],
-            "VoiceId": tool_parameters["voiceId"],
-            "LanguageCode": tool_parameters["languageCode"],
+            "Engine": tool_parameters["engine"] if "engine" in tool_parameters else "neural",
+            "VoiceId": tool_parameters["voiceId"] if "voiceId" in tool_parameters else "ai3-Jony",
+            "LanguageCode": tool_parameters["languageCode"] if "languageCode" in tool_parameters else "en-US",
             "Text": tool_parameters["text"],
-            "OutputFormat": tool_parameters["outputFormat"],
-            "SampleRate": tool_parameters["sampleRate"],
-            "Effect": tool_parameters["effect"],
-            "MasterVolume": tool_parameters["masterVolume"],
-            "MasterSpeed": tool_parameters["masterSpeed"],
-            "MasterPitch": tool_parameters["masterPitch"],
+            "OutputFormat": tool_parameters["outputFormat"] if "outputFormat" in tool_parameters else "mp3",
+            "SampleRate": tool_parameters["sampleRate"] if "sampleRate" in tool_parameters else "48000",
+            "Effect": tool_parameters["effect"] if "effect" in tool_parameters else "default",
+            "MasterVolume": tool_parameters["masterVolume"] if "masterVolume" in tool_parameters else "0",
+            "MasterSpeed": tool_parameters["masterSpeed"] if "masterSpeed" in tool_parameters else "0",
+            "MasterPitch": tool_parameters["masterPitch"] if "masterPitch" in tool_parameters else "0",
         }
         response = requests.post(
             url=base_url, headers=headers, data=json.dumps(json_data), timeout=5)
