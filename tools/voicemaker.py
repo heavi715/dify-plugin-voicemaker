@@ -6,7 +6,7 @@ from dify_plugin import Tool
 from dify_plugin.entities.tool import ToolInvokeMessage
 import requests
 
-DEFAULT_BASE_URL = "https://developer.voicemaker.in/voice/api"
+DEFAULT_BASE_URL = "https://developer.voicemaker.in"
 
 
 class VoicemakerTool(Tool):
@@ -23,6 +23,7 @@ class VoicemakerTool(Tool):
 
         api_key = self.runtime.credentials["serpapi_api_key"]
         base_url = self.runtime.credentials["base_url"] if self.runtime.credentials["base_url"] else DEFAULT_BASE_URL
+        api_url = base_url + "/voice/api"
         headers = {
             "Authorization": "Bearer "+api_key,
             "Content-Type": "application/json"
@@ -41,7 +42,7 @@ class VoicemakerTool(Tool):
             "MasterPitch": tool_parameters["masterPitch"] if "masterPitch" in tool_parameters else "0",
         }
         response = requests.post(
-            url=base_url, headers=headers, data=json.dumps(json_data), timeout=5)
+            url=api_url, headers=headers, data=json.dumps(json_data), timeout=5)
         response.raise_for_status()
         valuable_res = self._parse_response(response.json())
 
