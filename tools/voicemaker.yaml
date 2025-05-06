@@ -7,9 +7,9 @@ identity:
     pt_BR: voicemaker
 description:
   human:
-    en_US: voicemaker api
-    zh_Hans: voicemaker 生成语音 api
-    pt_BR: voicemaker api
+    en_US: voicemaker is the voicemaker.in api
+    zh_Hans: voicemaker 是 voicemaker.in 的 API
+    pt_BR: voicemaker é a API do voicemaker.in
   llm: voicemaker api
 parameters:
   - name: engine

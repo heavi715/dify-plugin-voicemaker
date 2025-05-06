@@ -4,14 +4,14 @@ author: heavi
 name: voicemaker
 label:
   en_US: voicemaker
-  ja_JP: voicemaker
-  zh_Hans: voicemaker
-  pt_BR: voicemaker
+  ja_JP: ボイスメーカー
+  zh_Hans: 语音合成器
+  pt_BR: Gerador de Voz
 description:
-  en_US: voicemaker
-  ja_JP: voicemaker
-  zh_Hans: voicemaker
-  pt_BR: voicemaker
+  en_US: Text-to-speech API powered by voicemaker.in
+  ja_JP: voicemaker.in によるテキスト読み上げAPI
+  zh_Hans: 基于 voicemaker.in 的文本转语音 API
+  pt_BR: API de conversão de texto em fala do voicemaker.in
 icon: icon.svg
 resource:
   memory: 268435456

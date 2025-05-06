@@ -6,9 +6,9 @@ identity:
     zh_Hans: voicemaker
     pt_BR: voicemaker
   description:
-    en_US: voicemaker api
-    zh_Hans: voicemaker api
-    pt_BR: voicemaker api
+    en_US: voicemaker is the voicemaker.in api
+    zh_Hans: voicemaker 是 voicemaker.in 的 API
+    pt_BR: voicemaker é a API do voicemaker.in
   icon: icon.svg
   tags: #
     - other
