@@ -10,7 +10,7 @@ This tool is designed with privacy in mind and does not collect any user data. W
 
 ## Third-Party Services
 
-This tool does not integrate with or utilize any third-party services that might collect user data.
+This tool integrates the voicemaker.in function.
 
 ## Changes to Privacy Policy
 
